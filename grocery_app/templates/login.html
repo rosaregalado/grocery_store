@@ -2,14 +2,13 @@
 {% block content %}
 
 <h1>Log In</h1>
-
 <form action="/login" method="POST">
     {{ form.csrf_token }}
     <fieldset>
         <legend>Enter your credentials</legend>
 
         {{ form.username.label }}
-        {{ form.username }}
+        <p>{{ form.username }}</p>
         <ul>
         {% for error in form.username.errors %}
             <li class="error">{{ error }}</li>
@@ -17,14 +16,14 @@
         </ul>
 
         {{ form.password.label }}
-        {{ form.password }}
+        <p>{{ form.password }}</p>
         <ul>
         {% for error in form.password.errors %}
             <li class="error">{{ error }}</li>
         {% endfor %}
         </ul>
 
-        {{ form.submit }}
+        <p>{{ form.submit }}</p>
     </fieldset>
 </form>
 
